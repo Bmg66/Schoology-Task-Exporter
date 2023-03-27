@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Schoology Task Exporter",
+  "version": "1.0",
+  "description": "Exports tasks from Schoology to a text file.",
+  "permissions": ["https://classical.schoology.com/*", "downloads", "storage", "activeTab"],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://classical.schoology.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

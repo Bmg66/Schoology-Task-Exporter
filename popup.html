@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schoology Task Exporter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 15px;
+            background-color: #f6f8fa;
+            color: #333;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #3e8ef7, #4CAF50);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: wave 6s linear infinite;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.2s, transform 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        button:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+        .icon-container {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .button-icon {
+            margin-right: 5px;
+        }
+        #copyButton {
+            background-color: #3e8ef7;
+        }
+        #copyButton:hover {
+            background-color: #3071d0;
+        }
+        @keyframes wave {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-container">
+        <i class="fas fa-tasks"></i>
+    </div>
+    <h1>Schoology Task Exporter</h1>
+    <p>Click the button below to export your upcoming tasks from Schoology.</p>
+    <div class="button-container">
+        <button id="exportButton"><i class="fas fa-file-download button-icon"></i>Export Tasks</button>
+        <button id="copyButton"><i class="fas fa-clipboard button-icon"></i>Copy Tasks</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
